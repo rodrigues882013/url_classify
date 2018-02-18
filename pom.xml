@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.felipe</groupId>
-	<artifactId>exportapplication</artifactId>
+	<artifactId>url-classify</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>exportapplication</name>
+	<name>url-classify</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -45,8 +45,19 @@
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
-			<version>2.10.4</version>
+			<version>2.10.6</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-scala_2.10</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>

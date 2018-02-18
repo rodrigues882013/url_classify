@@ -1,4 +1,4 @@
-package com.felipe.exportapplication;
+package com.urlclassify.configuration
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -7,9 +7,9 @@ import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(classOf[SpringRunner])
 @SpringBootTest
-class ExportApplicationTests
+class ApplicationTests
 
-object ExportApplicationTests extends App{
+object ApplicationTests extends App{
 	
 	@Test
 	def contextLoads: Unit = {

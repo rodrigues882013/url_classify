@@ -1,6 +1,6 @@
 package com.urlclassify.configuration
 
-import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.{DeserializationConfig, DeserializationFeature, ObjectMapper}
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.context.annotation.{Bean, ComponentScan, Configuration}
 import org.springframework.http.converter.HttpMessageConverter
@@ -15,12 +15,11 @@ import com.fasterxml.jackson.module.scala.DefaultScalaModule
 class AppConfig extends WebMvcConfigurerAdapter {
 
   override def configureMessageConverters(converters: java.util.List[HttpMessageConverter[_]]) {
-    def mapper: ObjectMapper = createObjectMapper
-    mapper.registerModule(new DefaultScalaModule)
+    val mapper: ObjectMapper = createObjectMapper
+    mapper.registerModule(DefaultScalaModule)
 
     def converter = createJacksonHttpMessageConverter
     converter.setObjectMapper(mapper)
-
     converters.add(converter)
   }
 
